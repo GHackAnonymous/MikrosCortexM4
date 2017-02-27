@@ -1,0 +1,96 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY
+    2 00000000         
+    3 00000000         ;/*---- uint32_t min(uint32_t n, uint32_t m) -----------
+                       ----------------------------
+    4 00000000         ;  arguments: r0, 
+    5 00000000         ;  return:    r0,
+    6 00000000         ;-------------------------------------------------------
+                       --------------------*/  
+    7 00000000         
+    8 00000000         
+    9 00000000         ;/*---- uint32_t min(uint32_t n, uint32_t m) -----------
+                       ----------------------------
+   10 00000000         ;  if(n<m){
+   11 00000000         ;  return n;
+   12 00000000         ; }else{
+   13 00000000         ;  return m;
+   14 00000000         ; }
+   15 00000000         ;-------------------------------------------------------
+                       --------------------*/  
+   16 00000000         
+   17 00000000         
+   18 00000000         
+   19 00000000         
+   20 00000000                 AREA             |.TEXT|, CODE, READONLY
+   21 00000000         
+   22 00000000         min     PROC
+   23 00000000                 EXPORT           min
+   24 00000000 4288            cmp              r0,r1
+   25 00000002 D200            bhs              endMin
+   26 00000004 4770            bx               lr
+   27 00000006         endMin
+   28 00000006 4608            mov              r0,r1
+   29 00000008 4770            bx               lr
+   30 0000000A                 ENDP
+   31 0000000A                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\min.d -o.\objects\min.o -I"D:\GHackAnonymous\Areas de
+ Trabajo IDES\MicrosWS\01Assambler\06min\RTE\_Target_1" -I"D:\Archivos de Progr
+amas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include" -I"D:\Archivos de Programa
+s\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\
+Include" --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 522" -
+-predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=.\listings\mi
+n.lst src\min.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file src\min.s
+   Uses
+      None
+Comment: .text unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.TEXT 00000000
+
+Symbol: .TEXT
+   Definitions
+      At line 20 in file src\min.s
+   Uses
+      None
+Comment: .TEXT unused
+endMin 00000006
+
+Symbol: endMin
+   Definitions
+      At line 27 in file src\min.s
+   Uses
+      At line 25 in file src\min.s
+Comment: endMin used once
+min 00000000
+
+Symbol: min
+   Definitions
+      At line 22 in file src\min.s
+   Uses
+      At line 23 in file src\min.s
+Comment: min used once
+3 symbols
+339 symbols in table
