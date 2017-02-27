@@ -1,0 +1,134 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.data|, READWRITE
+    2 00000000 00000007 
+                       x1      DCD              7
+    3 00000004 00000003 
+                       x2      DCD              3
+    4 00000008 0000002D 
+                       x3      DCD              45
+    5 0000000C 0000000B 
+                       x4      DCD              11
+    6 00000010 00      result  DCB              0
+    7 00000011         
+    8 00000011                 AREA             |.text|, CODE, READONLY
+    9 00000000         main    PROC
+   10 00000000                 EXPORT           main
+   11 00000000         
+   12 00000000 4807            ldr              r0,=x1
+   13 00000002 6800            ldr              r0,[r0]
+   14 00000004         
+   15 00000004 4907            ldr              r1,=x2
+   16 00000006 6809            ldr              r1,[r1]
+   17 00000008 EBA0 0001       sub              r0,r1
+   18 0000000C         
+   19 0000000C 4906            ldr              r1,=x3
+   20 0000000E 6809            ldr              r1,[r1]
+   21 00000010 4408            add              r0,r1
+   22 00000012         
+   23 00000012 4906            ldr              r1,=x4
+   24 00000014 6809            ldr              r1,[r1]
+   25 00000016 EBA0 0001       sub              r0,r1
+   26 0000001A         
+   27 0000001A 4905            ldr              r1,=result
+   28 0000001C 6008            str              r0,[r1]
+   29 0000001E         
+   30 0000001E E7FE            b                .
+   31 00000020                 ENDP
+   32 00000020                 END
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\01sumsmain.d -o.\objects\01sumsmain.o -I"D:\GHackAnon
+ymous\Areas de Trabajo IDES\MicrosWS\01Assambler\01Sum\RTE\_Target_1" -I"D:\Arc
+hivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include" -I"D:\Archiv
+os de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device
+\ST\STM32F4xx\Include" --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSI
+ON SETA 522" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list
+=.\listings\01sumsmain.lst src\01sumsMain.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.data 00000000
+
+Symbol: .data
+   Definitions
+      At line 1 in file src\01sumsMain.s
+   Uses
+      None
+Comment: .data unused
+result 00000010
+
+Symbol: result
+   Definitions
+      At line 6 in file src\01sumsMain.s
+   Uses
+      At line 27 in file src\01sumsMain.s
+Comment: result used once
+x1 00000000
+
+Symbol: x1
+   Definitions
+      At line 2 in file src\01sumsMain.s
+   Uses
+      At line 12 in file src\01sumsMain.s
+Comment: x1 used once
+x2 00000004
+
+Symbol: x2
+   Definitions
+      At line 3 in file src\01sumsMain.s
+   Uses
+      At line 15 in file src\01sumsMain.s
+Comment: x2 used once
+x3 00000008
+
+Symbol: x3
+   Definitions
+      At line 4 in file src\01sumsMain.s
+   Uses
+      At line 19 in file src\01sumsMain.s
+Comment: x3 used once
+x4 0000000C
+
+Symbol: x4
+   Definitions
+      At line 5 in file src\01sumsMain.s
+   Uses
+      At line 23 in file src\01sumsMain.s
+Comment: x4 used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 8 in file src\01sumsMain.s
+   Uses
+      None
+Comment: .text unused
+main 00000000
+
+Symbol: main
+   Definitions
+      At line 9 in file src\01sumsMain.s
+   Uses
+      At line 10 in file src\01sumsMain.s
+Comment: main used once
+2 symbols
+345 symbols in table
