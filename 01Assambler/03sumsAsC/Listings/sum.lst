@@ -1,0 +1,47 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000                 AREA             |.text|, CODE, READONLY
+    3 00000000         
+    4 00000000         sum     PROC
+    5 00000000                 EXPORT           sum
+    6 00000000 4408            add              r0,r1
+    7 00000002 4770            bx               lr
+    8 00000004                 ENDP
+    9 00000004                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\sum.d -o.\objects\sum.o -I"D:\GHackAnonymous\Areas de
+ Trabajo IDES\MicrosWS\01Assambler\03sumsAsC\RTE\_Target_1" -I"D:\Archivos de P
+rogramas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include" -I"D:\Archivos de Prog
+ramas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F
+4xx\Include" --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 52
+2" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=.\listing
+s\sum.lst src\sum.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 2 in file src\sum.s
+   Uses
+      None
+Comment: .text unused
+sum 00000000
+
+Symbol: sum
+   Definitions
+      At line 4 in file src\sum.s
+   Uses
+      At line 5 in file src\sum.s
+Comment: sum used once
+2 symbols
+337 symbols in table
