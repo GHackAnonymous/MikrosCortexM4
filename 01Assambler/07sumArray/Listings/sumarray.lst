@@ -1,0 +1,97 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY
+    2 00000000         
+    3 00000000         ;/*---- uint32_t min(uint32_t n, uint32_t m) -----------
+                       ----------------------------
+    4 00000000         ;  arguments: r0, 
+    5 00000000         ;  return:    r0,
+    6 00000000         ;-------------------------------------------------------
+                       --------------------*/  
+    7 00000000         
+    8 00000000         
+    9 00000000         ;/*---uint32_t sumArray( uint32_t *bektore , uint32_t di
+                       m) -------------
+   10 00000000         ;     {
+   11 00000000         ;         uint32_t sum=0;
+   12 00000000         ;         while( dim>0)
+   13 00000000         ;    {
+   14 00000000         ;        sum+=*bektore;
+   15 00000000         ;     bektore++;
+   16 00000000         ;     dim--;
+   17 00000000         ;    }
+   18 00000000         ;      return sum;
+   19 00000000         ;}------------------------------------------------------
+                       ---------------*/ 
+   20 00000000         
+   21 00000000         sumArray
+                               PROC
+   22 00000000                 EXPORT           sumArray
+   23 00000000 F04F 0200       mov              r2, #0
+   24 00000004         loop
+   25 00000004 B131            cbz              r1, endSumArray
+   26 00000006         ; Esto es igual que esto
+   27 00000006         ;cmp r1, #0
+   28 00000006         ;beq aurrera
+   29 00000006 6803            ldr              r3,[r0]
+   30 00000008 441A            add              r2,r3
+   31 0000000A F1A1 0101       sub              r1, #1
+   32 0000000E F100 0004       add              r0, #4
+   33 00000012 E7F7            b                loop
+   34 00000014         endSumArray
+   35 00000014 4610            mov              r0, r2
+   36 00000016 4770            bx               lr
+   37 00000018                 ENDP
+   38 00000018                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\sumarray.d -o.\objects\sumarray.o -I"D:\GHackAnonymou
+s\Areas de Trabajo IDES\MicrosWS\01Assambler\07sumArray\RTE\_Target_1" -I"D:\Ar
+chivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include" -I"D:\Archi
+vos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Devic
+e\ST\STM32F4xx\Include" --predefine="__EVAL SETA 1" --predefine="__UVISION_VERS
+ION SETA 522" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --lis
+t=.\listings\sumarray.lst src\sumArray.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file src\sumArray.s
+   Uses
+      None
+Comment: .text unused
+endSumArray 00000014
+
+Symbol: endSumArray
+   Definitions
+      At line 34 in file src\sumArray.s
+   Uses
+      At line 25 in file src\sumArray.s
+Comment: endSumArray used once
+loop 00000004
+
+Symbol: loop
+   Definitions
+      At line 24 in file src\sumArray.s
+   Uses
+      At line 33 in file src\sumArray.s
+Comment: loop used once
+sumArray 00000000
+
+Symbol: sumArray
+   Definitions
+      At line 21 in file src\sumArray.s
+   Uses
+      At line 22 in file src\sumArray.s
+Comment: sumArray used once
+4 symbols
+339 symbols in table
