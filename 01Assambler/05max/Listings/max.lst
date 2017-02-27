@@ -1,0 +1,58 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000                 AREA             |.TEXT|, CODE, READONLY
+    3 00000000         
+    4 00000000         max     PROC
+    5 00000000                 EXPORT           max
+    6 00000000 4288            cmp              r0,r1
+    7 00000002 D200            bhs              endMax
+    8 00000004 4608            mov              r0,r1
+    9 00000006         endMax
+   10 00000006 4770            bx               lr
+   11 00000008                 ENDP
+   12 00000008                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\max.d -o.\objects\max.o -I"D:\GHackAnonymous\Areas de
+ Trabajo IDES\MicrosWS\01Assambler\05max\RTE\_Target_1" -I"D:\Archivos de Progr
+amas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include" -I"D:\Archivos de Programa
+s\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\
+Include" --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 522" -
+-predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=.\listings\ma
+x.lst src\max.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.TEXT 00000000
+
+Symbol: .TEXT
+   Definitions
+      At line 2 in file src\max.s
+   Uses
+      None
+Comment: .TEXT unused
+endMax 00000006
+
+Symbol: endMax
+   Definitions
+      At line 9 in file src\max.s
+   Uses
+      At line 7 in file src\max.s
+Comment: endMax used once
+max 00000000
+
+Symbol: max
+   Definitions
+      At line 4 in file src\max.s
+   Uses
+      At line 5 in file src\max.s
+Comment: max used once
+3 symbols
+338 symbols in table
