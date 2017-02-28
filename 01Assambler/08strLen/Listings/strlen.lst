@@ -1,0 +1,93 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY
+    2 00000000         ;/*---- uint32_t ourStrLen ( char *pStr ) --------------
+                       -------------------------
+    3 00000000         ;  arguments: r0, 
+    4 00000000         ;  return:    r0,
+    5 00000000         ;-------------------------------------------------------
+                       --------------------*/  
+    6 00000000         
+    7 00000000         
+    8 00000000         ;/*---- uint32_t ourStrLen ( char *pStr ) --------------
+                       -------------------------
+    9 00000000         ;{
+   10 00000000         ; uint32_t n=0;
+   11 00000000         ; while ( *pStr !=0)
+   12 00000000         ; {
+   13 00000000         ;  n++;
+   14 00000000         ;  pStr++;
+   15 00000000         ; }
+   16 00000000         ; return n ;
+   17 00000000         ;}
+   18 00000000         ;-------------------------------------------------------
+                       --------------------*/  
+   19 00000000         
+   20 00000000         ourStrLen
+                               PROC
+   21 00000000                 EXPORT           ourStrLen
+   22 00000000 F04F 0100       mov              r1, #0      ;uint32_t n=0;
+   23 00000004         loop                                 ;while
+   24 00000004 7802            ldrb             r2,[r0]     ; mueve de la pila 
+                                                            al reguistro
+   25 00000006 B122            cbz              r2, endOurStrLen ;( *pStr !=0)
+   26 00000008 F101 0101       add              r1, #1      ;n++;
+   27 0000000C F100 0001       add              r0, #1      ;pStr++;
+   28 00000010 E7F8            b                loop
+   29 00000012         endOurStrLen
+   30 00000012 4610            mov              r0, r2      ;return n ;
+   31 00000014 4770            bx               lr
+   32 00000016                 ENDP
+   33 00000016                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\strlen.d -o.\objects\strlen.o -I"D:\GHackAnonymous\Ar
+eas de Trabajo IDES\MicrosWS\01Assambler\08strLen\RTE\_Target_1" -I"D:\Archivos
+ de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include" -I"D:\Archivos de
+ Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\S
+TM32F4xx\Include" --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SE
+TA 522" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=.\li
+stings\strlen.lst src\strLen.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file src\strLen.s
+   Uses
+      None
+Comment: .text unused
+endOurStrLen 00000012
+
+Symbol: endOurStrLen
+   Definitions
+      At line 29 in file src\strLen.s
+   Uses
+      At line 25 in file src\strLen.s
+Comment: endOurStrLen used once
+loop 00000004
+
+Symbol: loop
+   Definitions
+      At line 23 in file src\strLen.s
+   Uses
+      At line 28 in file src\strLen.s
+Comment: loop used once
+ourStrLen 00000000
+
+Symbol: ourStrLen
+   Definitions
+      At line 20 in file src\strLen.s
+   Uses
+      At line 21 in file src\strLen.s
+Comment: ourStrLen used once
+4 symbols
+339 symbols in table
