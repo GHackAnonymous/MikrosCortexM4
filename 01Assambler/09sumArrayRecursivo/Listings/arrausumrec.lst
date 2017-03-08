@@ -1,0 +1,93 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             |.text|, CODE, READONLY
+    2 00000000         
+    3 00000000         arrauSumRec
+                               PROC
+    4 00000000                 EXPORT           arrauSumRec
+    5 00000000 B510            push{r4,lr}
+    6 00000002 B911            cbnz             r1, endArrauSumRec 
+                                                            ;if (dim == 0)
+    7 00000004 F04F 0000       mov              r0, #0
+    8 00000008 E007            b                saltoReturn0
+    9 0000000A         
+   10 0000000A         endArrauSumRec
+   11 0000000A         
+   12 0000000A         
+   13 0000000A         
+   14 0000000A         
+   15 0000000A         ;; al llegar a 1 en la dimension del array 
+   16 0000000A         ;; este descuenta 4 y la sirecion del registro 
+   17 0000000A         ;; R1 pasa a ser 0xfffffffd lo que proboca que 
+   18 0000000A         ;; este al pasar de nuevo por la instrucion 
+   19 0000000A         ;; cbz r1, endArraauSumRec esta compara si el contenido 
+                       
+   20 0000000A         ;; del reguistro es dero pero en este caso no lo es 
+   21 0000000A         ;; por lo tanto no sale del bucle 
+   22 0000000A         ;;
+   23 0000000A         ;; Solucion: en instrución en la que se suma 4 en R1
+   24 0000000A         ;; deveria ser suma de 1
+   25 0000000A         
+   26 0000000A 6804            ldr              r4,[r0]     ; tmp = *vector
+   27 0000000C F100 0004       add              r0, #4      ; vector++
+   28 00000010 F1A1 0101       sub              r1, #1      ; dim--
+   29 00000014 F7FF FFFE       bl               arrauSumRec
+   30 00000018 4420            add              r0, r4      ; r0 = r0 + r4; 
+   31 0000001A         saltoReturn0
+   32 0000001A E8BD 4010       pop{r4,lr}
+   33 0000001E 4770            bx               lr
+   34 00000020                 ENDP
+   35 00000020                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\arrausumrec.d -o.\objects\arrausumrec.o -I"D:\GHackAn
+onymous\Areas de Trabajo IDES\MicrosWS\01Assambler\09sumArrayRecursivo\RTE\_Tar
+get_1" -I"D:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Inclu
+de" -I"D:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Driv
+ers\CMSIS\Device\ST\STM32F4xx\Include" --predefine="__EVAL SETA 1" --predefine=
+"__UVISION_VERSION SETA 522" --predefine="_RTE_ SETA 1" --predefine="STM32F407x
+x SETA 1" --list=.\listings\arrausumrec.lst src\arrauSumRec.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 1 in file src\arrauSumRec.s
+   Uses
+      None
+Comment: .text unused
+arrauSumRec 00000000
+
+Symbol: arrauSumRec
+   Definitions
+      At line 3 in file src\arrauSumRec.s
+   Uses
+      At line 4 in file src\arrauSumRec.s
+      At line 29 in file src\arrauSumRec.s
+
+endArrauSumRec 0000000A
+
+Symbol: endArrauSumRec
+   Definitions
+      At line 10 in file src\arrauSumRec.s
+   Uses
+      At line 6 in file src\arrauSumRec.s
+Comment: endArrauSumRec used once
+saltoReturn0 0000001A
+
+Symbol: saltoReturn0
+   Definitions
+      At line 31 in file src\arrauSumRec.s
+   Uses
+      At line 8 in file src\arrauSumRec.s
+Comment: saltoReturn0 used once
+4 symbols
+339 symbols in table
