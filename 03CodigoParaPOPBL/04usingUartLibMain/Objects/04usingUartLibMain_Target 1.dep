@@ -1,0 +1,44 @@
+Dependencies for Project '04usingUartLibMain', Target 'Target 1': (DO NOT MODIFY !)
+F (.\04usingUartLibMain.c)(0x590B1D00)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I"E:\GHackAnonymous\Areas de Trabajo IDES\MicrosWS\03CodigoParaPOPBL\04usingUartLibMain\RTE\_Target_1"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F407xx --C99-o .\objects\04usinguartlibmain.o --omf_browse .\objects\04usinguartlibmain.crf --depend .\objects\04usinguartlibmain.d)
+I (E:\Archivos de Programas\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
+I (E:\Archivos de Programas\Keil_v5\ARM\ARMCC\include\string.h)(0x57F66928)
+I (E:\Archivos de Programas\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F66928)
+I (E:\Archivos de Programas\Keil_v5\ARM\ARMCC\include\ctype.h)(0x57F66926)
+I (ourRccGpio.h)(0x58998902)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x58232FDA)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\core_cm4.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_compiler.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_armcc.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x58232FDA)
+I (ourCom.h)(0x589D8776)
+I (sysClock.h)(0x58918276)
+F (.\ourRccGpio.c)(0x58998928)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I"E:\GHackAnonymous\Areas de Trabajo IDES\MicrosWS\03CodigoParaPOPBL\04usingUartLibMain\RTE\_Target_1"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F407xx --C99-o .\objects\ourrccgpio.o --omf_browse .\objects\ourrccgpio.crf --depend .\objects\ourrccgpio.d)
+I (ourRccGpio.h)(0x58998902)
+I (E:\Archivos de Programas\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x58232FDA)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\core_cm4.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_compiler.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_armcc.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x58232FDA)
+F (.\sysClock.c)(0x589D8686)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I"E:\GHackAnonymous\Areas de Trabajo IDES\MicrosWS\03CodigoParaPOPBL\04usingUartLibMain\RTE\_Target_1"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F407xx --C99-o .\objects\sysclock.o --omf_browse .\objects\sysclock.crf --depend .\objects\sysclock.d)
+I (sysClock.h)(0x58918276)
+I (E:\Archivos de Programas\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x58232FC8)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x58232FDA)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\core_cm4.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_compiler.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_armcc.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x58232FDA)
+F (.\ourCom.h)(0x589D8776)()
+F (.\ourRccGpio.h)(0x58998902)()
+F (.\sysClock.h)(0x58918276)()
+F (.\02uartLib.lib)(0x58D27D06)()
+F (RTE\Device\STM32F407ZGTx\startup_stm32f407xx.s)(0x58D284B2)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I"E:\GHackAnonymous\Areas de Trabajo IDES\MicrosWS\03CodigoParaPOPBL\04usingUartLibMain\RTE\_Target_1"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"--pd "__UVISION_VERSION SETA 522" --pd "_RTE_ SETA 1" --pd "STM32F407xx SETA 1"--list .\listings\startup_stm32f407xx.lst --xref -o .\objects\startup_stm32f407xx.o --depend .\objects\startup_stm32f407xx.d)
+F (RTE\Device\STM32F407ZGTx\system_stm32f4xx.c)(0x58232FC8)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork --split_sections-I"E:\GHackAnonymous\Areas de Trabajo IDES\MicrosWS\03CodigoParaPOPBL\04usingUartLibMain\RTE\_Target_1"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include"-I"E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include"-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F407xx --C99-o .\objects\system_stm32f4xx.o --omf_browse .\objects\system_stm32f4xx.crf --depend .\objects\system_stm32f4xx.d)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x58232FC8)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x58232FDA)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\core_cm4.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F66928)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_compiler.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include\cmsis_armcc.h)(0x58259C4E)
+I (E:\Archivos de Programas\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x58232FDA)
