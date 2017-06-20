@@ -1,0 +1,8 @@
+Dependencies for Project '05Exti10', Target 'Target 1': (DO NOT MODIFY !)
+F (.\22simpleExti02Main.c)(0x58EE51A6)()
+F (.\ourExti.c)(0x58EE51A6)()
+F (.\ourRccGpio.c)(0x58EE5223)()
+F (.\ourRccGpio.h)(0x58EE51D5)()
+F (.\ourExti.h)(0x58EE5223)()
+F (RTE\Device\STM32F407ZGTx\startup_stm32f407xx.s)(0x58EE4B1A)()
+F (RTE\Device\STM32F407ZGTx\system_stm32f4xx.c)(0x58232FC8)()
